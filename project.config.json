@@ -1,0 +1,105 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false
+	},
+	"appid": "wx540d441fa7f04c32",
+	"projectname": "%E4%BA%91%E8%AE%A1%E7%AE%97%E9%A1%B9%E7%9B%AE",
+	"libVersion": "2.2.5",
+	"compileType": "miniprogram",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 10,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "user Mode",
+					"pathName": "pages/user/user",
+					"query": "id=ohiMg5UxFM2Rs7t9mX2j3Z5hr-Dg"
+				},
+				{
+					"id": 2,
+					"name": "photo Mode",
+					"pathName": "pages/photo/photo",
+					"query": "id=XBoYacDR1TiN88xx"
+				},
+				{
+					"id": 3,
+					"name": "add Mode",
+					"pathName": "pages/add/add",
+					"query": "id=ohiMg5UxFM2Rs7t9mX2j3Z5hr-Dg"
+				},
+				{
+					"id": -1,
+					"name": "photo Mode",
+					"pathName": "pages/albums/albums",
+					"query": "id=XBoYacDR1TiN88xx"
+				},
+				{
+					"id": 5,
+					"name": "userStorage Mode",
+					"pathName": "pages/userStorage/userStorage",
+					"query": "id=ohiMg5UxFM2Rs7t9mX2j3Z5hr-Dg"
+				},
+				{
+					"id": 6,
+					"name": "albumPhotos Mode",
+					"pathName": "pages/albumPhotos/albumPhotos",
+					"query": "id=XCTD0cDR1TiNJALW"
+				},
+				{
+					"id": 7,
+					"name": "ceshi Mode",
+					"pathName": "pages/ceshi/ceshi",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "administrator Mode",
+					"pathName": "pages/administrator/administrator",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "groupAlbum Mode",
+					"pathName": "pages/groupAlbum/groupAlbum",
+					"query": "id=XCbMBZT75u221e75&albumname=yun&albumfileid=21312.123"
+				},
+				{
+					"id": -1,
+					"name": "home Mode",
+					"pathName": "pages/home/home",
+					"query": ""
+				}
+			]
+		}
+	}
+}
