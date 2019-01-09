@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/user/user",
+    "pages/albums/albums",
+    "pages/photo/photo",
+    "pages/add/add",
+    "pages/userStorage/userStorage",
+    "pages/albumPhotos/albumPhotos",
+    "pages/administrator/administrator",
+    "pages/groupAlbum/groupAlbum",
+    "pages/index/index",
+    "pages/main/main",
+    "pages/update/update"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云记忆",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  }
+}
