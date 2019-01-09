@@ -1,0 +1,26 @@
+/* pages/albumPhotos/albumPhotos.wxss */
+.imageBox{
+  text-align: center;
+}
+.imageClass{
+  width: 240rpx;
+  height: 240rpx;
+}
+.photosClass{
+  margin-top:0rpx;
+}
+.addAlbum {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 80rpx;
+  position: fixed;
+  bottom: 20rpx;
+  left: 335rpx;
+  background-color: #FFFFFF;
+}
+.addImage {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 80rpx;
+  box-shadow: 3rpx 3rpx 3rpx 3rpx #666;
+}

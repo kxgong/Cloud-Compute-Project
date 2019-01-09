@@ -1,0 +1,64 @@
+<!--pages/index/browse/browse.wxml-->
+<view class="container">
+  <scroll-view class="publishes" scroll-y>
+    <block wx:for="{{ans}}">
+      <view class="publish">
+        <view class="userinfo">
+          <image class="userinfo-avatar" style="background-image: url({{item.userInfo.avatarUrl}})">
+          </image>
+          <text class="userinfo-nickname">{{item.userInfo.nickName}}</text>
+        </view>
+        <view class="photo-container">
+          <image class="user-photo" src="{{item.fileId}}" data-imagesrc='{{item.fileId}}' bindtap='imagePreview' mode="aspectFill">
+          </image>
+        </view>
+
+        <view class="tool">
+          <button class="item-button1" 
+          id="{{index}}" 
+          bindtap='likeFun'>
+            <image class="tool-item" src="{{li}}">
+            </image>
+          </button>
+          <text class="item-text1">{{item.like}}
+    </text>
+          <button class="item-button2"
+                  id="{{index}}"
+                  open-type='share'
+          >
+            <image class="tool-item" src="{{sh}}">
+            </image>
+          </button>
+          <text class="item-text2">{{item.share}}</text>
+
+          <button 
+           wx:if="{{item.userInfo._id}}={{userInfo._id}}"
+           class="item-button3"
+            id="{{index}}"
+            bindtap="dl"
+          >
+          <image class="tool-item"
+        
+           src="{{sc}}">
+          </image>
+          </button>
+        </view>
+
+        <view class="commit">
+          <text class="commit-content">
+        {{item.comment}}
+  
+    </text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class='appen'>
+    <button class='appen-button' bindtap='uploadFun'>
+      <image class='add-im' src="{{ad}}" mode='aspectFit'></image>
+    </button>
+  </view>
+
+
+</view>

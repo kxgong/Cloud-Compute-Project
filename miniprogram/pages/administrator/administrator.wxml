@@ -1,0 +1,2 @@
+<view bindtap="manageSpace">删除没有用户引用的文件</view>
+<view bindtap="deletePhotos">备份</view>

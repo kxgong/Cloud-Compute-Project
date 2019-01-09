@@ -1,0 +1,15 @@
+<!--pages/albums/albums.wxml-->
+<!-- <view class="container">
+  <view class="album" wx:for="{{photo}}" wx:for-index="index" wx:key="{{index}}" data-index = "{{item.fileId}}" data-id ="{{item._id}}"   bindlongpress = "longpress" >  
+    <image 
+    style="width: 300rpx; height: 250rpx; background-color: #eeeeee"
+    mode="scaleToFill"
+    src="{{item.fileId}}"  >
+    </image>
+    <!-- <text> {{item._openid}}</text> -->
+
+<van-tabs active="0" custom-class = "tabss" swipeable = "true" bind:change="onChange">
+  <van-tab title="标签 1" class = "tabClass">内容 1</van-tab>
+  <van-tab title="标签 2">内容 2</van-tab>
+  <van-tab title="标签 3">内容 3</van-tab>
+</van-tabs>

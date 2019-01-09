@@ -1,0 +1,9 @@
+<image src="../../image/云上海淀.png" class="logoClass"></image>
+<button open-type='getUserInfo' bindgetuserinfo='getUserInfo' hidden='{{authorizated}}'>如未授权，请授权</button>
+
+<navigator url='../main/main'>
+  <button disabled='{{!authorizated}}'>进入社区</button>
+</navigator>
+<navigator url='../user/user'>
+  <button disabled='{{!authorizated}}'>进入个人空间</button>
+</navigator>

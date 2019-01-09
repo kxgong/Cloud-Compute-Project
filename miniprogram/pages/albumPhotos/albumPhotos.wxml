@@ -1,0 +1,16 @@
+<block>
+  <view hidden="{{hiddenPhotos}}" class="photosClass">
+    <van-panel title="用户图片">
+      <van-row class="imageBox">
+        <block wx:for="{{photos}}" wx:key="{{_id}}">
+          <van-col span="8">
+            <image src="{{item.fileId}}" class="imageClass" bindtap='imagePreview' data-imagesrc="{{item.fileId}}"></image>
+          </van-col>
+        </block>
+      </van-row>
+    </van-panel>
+  </view>
+</block>
+<view class="addAlbum" bindtap="addAlbumPhotos">
+    <image src='../../image/add.png' class="addImage" hover-class="addHover"></image>
+</view>

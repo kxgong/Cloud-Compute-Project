@@ -1,0 +1,5 @@
+.logoClass{
+  width: 500rpx;
+  height: 500rpx;
+  padding-left: 125rpx; 
+}

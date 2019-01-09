@@ -1,0 +1,48 @@
+<!--pages/update/update.wxml-->
+<view class="update"
+>
+<view class="fabu">
+  <button class="fb-button"
+  type="primary"
+  bindtap='onClick'
+  >
+    发表
+  </button>
+</view>
+<view class="tt">
+  <text class="title">
+    发布动态
+  </text>
+</view>
+
+<view class="input-item">
+  <textarea class="input-content"
+  auto-focus placeholder="留下图片故事，最大输入140字"
+  bindinput='bindinput'
+  maxlength="140"
+  >
+  </textarea>
+</view>
+
+<view class="add-item">
+  <button class= "add-button"
+    bindtap='updateFun'
+  >
+  <image class="button-image"
+  mode="aspectFill"
+  src="{{addUrl}}"
+  
+  >
+
+  </image>
+  </button>
+</view>
+
+<view class="add-im">
+  <image class="add-image"
+    src='{{updateUrl}}'
+  >
+
+  </image>
+</view>
+</view> 

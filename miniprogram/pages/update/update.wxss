@@ -1,0 +1,77 @@
+/* pages/update/update.wxss */
+page {
+  background: #f6f6f6;
+  display: block;
+  flex-direction: column;
+}
+
+.update{
+  display: block;
+  justify-content: center;
+margin-left: 30rpx;
+  background: #f6f6f6;
+}
+
+.input-item{
+  width: 100%;
+  margin-right: 30rpx;
+  margin-top: 50rpx;
+  height: 250rpx;
+  background: #ffffff;
+}
+
+.input-content{
+  width: 100%;  
+}
+
+.add-item{
+  margin-top: 50rpx;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.add-button{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center; 
+  /* background-size: cover; */
+}
+
+.add-im{
+  margin-top: 80rpx;
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button-image{
+  width: 130rpx;
+  height: 130rpx;
+  /* border-radius: 50%; */
+  background-size:cover;
+}
+.add-image{
+  width: 400rpx;
+  height: 400rpx;
+  background-size:cover;
+}
+
+.fabu{
+  margin-top: 15rpx;
+  height: 70rpx;
+  width: 100%;
+  
+}
+
+.fb-button{
+  margin-right: 20rpx;
+  font-size: 30rpx;
+  width: 130rpx;
+  height: 100%;
+}

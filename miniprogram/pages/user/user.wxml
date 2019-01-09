@@ -1,0 +1,180 @@
+<view class="avatarBox">
+  <navigator url="../userStorage/userStorage?id='userInfo._openid'}">
+    <view class="storageDetail">
+      存储空间
+      <image src="../../image/right.png" class="rightImage"> </image>
+    </view>
+  </navigator>
+  <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+  <view class="avatarNickname">{{userInfo.nickName}}</view>
+</view>
+<view class="navTop">
+  <block wx:if="{{hiddenPhotos}}">
+    <view class="navTopItem" bindtap="tapPhotos">
+      <image src='../../image/photogrey.png' class="navimage"></image>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="navTopItem" bindtap="tapPhotos">
+      <image src='../../image/photoblue.png' class="navimage"></image>
+    </view>
+  </block>
+
+  <block wx:if="{{hiddenAlbums}}">
+    <view class="navTopItem" bindtap="tapAlbums">
+      <image src='../../image/albumgrey.png' class="navimage"></image>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="navTopItem" bindtap="tapAlbums">
+      <image src='../../image/albumblue.png' class="navimage"></image>
+    </view>
+  </block>
+
+  <block wx:if="{{hiddenGroupAlbums}}">
+    <view class="navTopItem" bindtap="tapGroupAlbums">
+      <image src='../../image/groupgrey.png' class="navimage"></image>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="navTopItem" bindtap="tapGroupAlbums">
+      <image src='../../image/groupblue.png' class="navimage"></image>
+    </view>
+  </block>
+</view>
+
+<view hidden="{{hiddenPhotos}}" class="managementSpace">
+  <view class='photoNav'>
+    <view class='photoNavItem1'>
+      共计{{photos.length}}张图片
+    </view>
+    <view bindtap="addPhotos" class='photoNavItem2' hidden="{{management_photo}}">添加</view>
+    <view wx:if="{{!management_photo}}" class='photoNavItem3' bindtap='management'>
+      管理
+    </view>
+    <view wx:if="{{management_photo}}" class='photoNavItem3' bindtap='finish_management'>
+      完成
+    </view>
+  </view>
+</view>
+
+<block>
+  <view hidden="{{hiddenPhotos}}" style="margin-bottom: 100rpx">
+    <van-panel>
+      <view>
+        <van-row class="imageBox">
+          <block wx:for="{{photos}}" wx:key="{{_id}}">
+            <view hidden="{{!management_photo}}" bindtap='select' data-id="{{index}}">
+              <van-col span="8">
+                <view class="imageView">
+                  <block wx-if="{{!item.selected}}">
+                    <icon type="success" size="20" color="white" class="imageIcon" />
+                  </block>
+                  <block wx-if="{{item.selected}}">
+                    <icon type="success" size="20" color="red" class="imageIcon" />
+                  </block>
+                  <image src="{{item.fileId}}" class="imageClass"></image>
+                </view>
+              </van-col>
+            </view>
+            <view hidden="{{management_photo}}">
+              <van-col span="8">
+                <!-- <navigator url="../photo/photo?id={{item._id}}&userid={{item._openid}}">
+                  <image src="{{item.fileId}}" class="imageClass"></image>
+                </navigator> -->
+                <image src="{{item.fileId}}" class="imageClass" bindtap="imagePreview" data-id="{{index}}" data-imagesrc="{{item.fileId}}" bindlongpress="longpressPhoto"></image>
+              </van-col>
+            </view>
+          </block>
+        </van-row>
+      </view>
+    </van-panel>
+  </view>
+</block>
+
+
+<block>
+  <view hidden="{{hiddenAlbums}}" class="photosClass">
+    <van-panel>
+      <van-row class="imageBox">
+        <block wx:for="{{albums}}" wx:key="{{_id}}">
+          <navigator url="../albumPhotos/albumPhotos?id={{item._id}}">
+            <van-col span="12">
+              <image src="{{item.fileId}}" class="albumImageClass" bindlongpress="longPressAlbum" data-id="{{index}}"></image>
+              <view class="albumNameClass">{{item.albumName}}</view>
+              <view class="albumCountClass">{{item.photoCount}}</view>
+            </van-col>
+          </navigator>
+        </block>
+      </van-row>
+    </van-panel>
+  </view>
+</block>
+
+
+<view class='panelClass'>
+  <view hidden="{{hiddenGroupAlbums}}" class="photosClass">
+    <van-panel class="panelClass">
+      <van-row class="imageBox">
+        <block wx:for="{{groupAlbums}}" wx:key="{{_id}}">
+          <navigator url="../groupAlbum/groupAlbum?id={{item.albumId}}&albumname={{item.albumName}}&albumfileid={{item.fileId}}">
+            <van-col span="12">
+              <view class="albumClass">
+                <image src="{{item.fileId}}" class="albumImageClass" bindlongpress="longPressGroupAlbum" data-id="{{index}}"></image>
+                <view class="albumNameClass">{{item.albumName}}</view>
+                <view class="albumCountClass">{{item.photoCount}}</view>
+              </view>
+            </van-col>
+          </navigator>
+        </block>
+      </van-row>
+    </van-panel>
+  </view>
+</view>
+
+<van-dialog title="创建新相册" use-slot async-close show="{{show}}" show-cancel-button bind:close="onClose">
+  <van-field value="{{ username }}" clearable label="用户名" placeholder="请输入用户名" bind:change="onChange" />
+</van-dialog>
+
+<van-dialog title="创建群相册" use-slot async-close show="{{showGroup}}" show-cancel-button bind:close="onCloseGroup">
+  <van-field value="{{ groupAlbumName }}" clearable label="群相册名" placeholder="请输入群相册名" bind:change="onChangeGroup" />
+</van-dialog>
+
+<view class='bottom flex_between' wx:if="{{management_photo}}">
+  <view class='left flex_start'>
+    <block wx:if="{{select_all}}">
+      <view bindtap='select_none' class='flex_start'>
+        <icon type="success" size="30" color="red" />
+        <view>
+          取消全选
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{!select_all}}">
+      <view bindtap='select_all' class='flex_start'>
+        <view class='select_none'>
+        </view>
+        <view>
+          全选
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='right flex_end'>
+    <view style='text-align:right'>
+      <view class='all'>
+        共选中{{middlearr.length}}张图片
+      </view>
+    </view>
+    <view bindtap='deletePhoto' class='sure'>
+      删除
+    </view>
+  </view>
+</view>
+
+<view hidden="{{hiddenGroupAlbums}}" class="addAlbum" bindtap="addGroupAlbum">
+  <image src='../../image/add.png' class="addImage" hover-class="addHover"></image>
+</view>
+<view hidden="{{hiddenAlbums}}" class="addAlbum" bindtap="addAlbum">
+  <image src='../../image/add.png' class="addImage" hover-class="addHover"></image>
+</view>

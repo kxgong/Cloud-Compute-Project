@@ -1,0 +1,84 @@
+<!--miniprogram/pages/main/main.wxml-->
+
+<view class='container'>
+
+  <!-- 用户头像及用户昵称-->
+  <view class="userinfo">
+    <icon 
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></icon>
+    <text class='userinfo-nickname'>Hello,{{name}}!</text>
+  </view>
+
+  <!--选择一个社区吧-->
+  <text class='chooseCommunity'>进入感兴趣的社区看看吧！</text>
+
+  <!--社区图标-->
+  <view class='images'>
+
+  <view class='row'>
+    <button class='community-button'
+     id='1'
+    bindtap='communityFun'>
+      <image 
+        mode='aspectFit'
+
+        src='{{src[0]}}'
+        class='image'></image>
+    </button>
+
+    <button class='community-button'
+       id='2'
+    bindtap='communityFun'> 
+      <image
+        mode='aspectFit'
+     
+        src='{{src[1]}}'
+        class='image'></image>
+    </button>
+
+    <button class='community-button'
+      id='3'
+    bindtap='communityFun'>
+      <image
+        mode='aspectFit'
+        src='{{src[5]}}'
+      
+        class='image'></image>
+    </button>
+  </view>
+
+   <view class='row'>
+   <button class='community-button'
+   id='4'
+   bindtap='communityFun'>
+   
+      <image
+        mode='aspectFit'
+        src='{{src[2]}}'
+        class='image'></image>
+   </button>
+
+   <button class='community-button'
+     id='5'
+     bindtap='communityFun'>
+      <image
+        mode='aspectFit'
+        src='{{src[3]}}'
+        class='image'></image>
+    </button>
+
+    <button class='community-button'
+    id='6'
+    bindtap='communityFun'>
+      <image
+        mode='aspectFit'
+        src='{{src[4]}}'
+        class='image'></image>
+    </button>
+   </view>
+
+  </view>
+
+</view>

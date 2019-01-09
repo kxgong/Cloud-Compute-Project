@@ -1,0 +1,78 @@
+/* miniprogram/pages/main/main.wxss */
+
+page{
+  background-color: rgb(250, 250, 250);
+}
+.userInfo{
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  
+}
+
+.userinfo-avatar {
+  width: 230rpx;                                                                                       
+  height: 230rpx;
+  border-radius: 50%;   /*使用圆形边框，边框半径为50%*/
+  background-size: contain; /*背景大小*/
+  background-color: white; /*背景颜色*/
+  margin-top: 170rpx;
+  margin-bottom: 10rpx;
+  margin-left: 0rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.userinfo-nickname{
+  /* margin-top: 2rpx; */
+  display: flex;
+  justify-content: center;
+  font-size: 35rpx;
+}
+
+.chooseCommunity{
+  display: flex;
+  justify-content: center;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+
+.images{
+  width: 80%;
+  height: 400rpx;
+  margin-top: 10rpx;
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
+}
+
+.row{
+  width: 95%;
+  height: 130rpx;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  margin-left: 10rpx;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
+}
+
+
+
+.community-button{
+  width: 150rpx;
+  height: 150rpx;
+  display:flex;
+  justify-content: center;
+  background-color: rgba(192, 192, 192, 0);
+  background-size: cover;
+}
+
+.community-button::after{
+  border: none;
+}
+
+.image{
+  width: 150rpx;
+  height: 150rpx;
+ 
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
+}

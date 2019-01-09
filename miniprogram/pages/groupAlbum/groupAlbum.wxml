@@ -1,0 +1,37 @@
+<view class="albumName">{{albumName}}</view>
+
+<van-panel title="用户">
+  <van-row class="imageBox">
+
+    <block wx:for="{{groupUser}}" wx:key="{{_id}}">
+      <van-col span="3">
+        <image src="{{item.userInfo}}" class="userImage"></image>
+      </van-col>
+    </block>
+    <van-col span="3">
+      <button open-type="share" style='height:88rpx;'>+</button>
+    </van-col>
+  </van-row>
+</van-panel>
+
+
+<view bindtap="addAlbumPhotos">
+  添加图片
+</view>
+
+
+<scroll-view class="srollViewClass">
+<block wx:for="{{photos}}" wx:key="{{_id}}">
+  <view class="imageBox">
+    <image class="imageClass" src="{{item.fileId}}" bindtap="imagePreview" data-imagesrc="{{item.fileId}}"></image>
+    <view class='userInfo'>
+      <image class="avatarUrl" src="{{item.userInfo.avatarUrl}}"></image>
+      {{item.userInfo.nickName}}
+    </view>
+  </view>
+</block>
+</scroll-view>
+
+<view class="addAlbum" bindtap="addAlbumPhotos">
+  <image src='../../image/add.png' class="addImage" hover-class="addHover"></image>
+</view>

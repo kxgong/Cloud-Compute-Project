@@ -1,0 +1,24 @@
+<view class="userBox">
+  <image src="{{userinfo.avatarUrl}}" class="userImage">
+  </image>
+  <view class="userNickName">{{userinfo.nickName}} </view>
+  <view class="divLine"> </view>
+</view>
+<view class="storageBox">
+  <view class="usedSpace">已使用 {{userSpace}}MB/500MB</view>
+  <canvas canvas-id="ringCanvas" class="canvas" bindtouchstart="touchHandler">
+  </canvas>
+</view>
+<view class="detailClass">详细</view>
+<view class="detailBox">
+  <view class="divLine2"> </view>
+  <image class="logo1" src="photo.png"></image>
+  <image class="logo2" src="album.png"></image>
+  <view class="nameClass1">个人照片</view> 
+  <view class="spaceClass1">{{personalFileSize}}MB</view>
+  <view class="spaceClass2">{{albumFileSize}}MB</view>
+  <view class="nameClass2">相册照片</view>
+</view>
+
+<!-- <view>调用stopAnimation终止动画，并监听渲染完成事件</view> -->
+<!-- <button type="primary" bindtap="updateData" style="margin-top:30rpx">更新title</button> -->

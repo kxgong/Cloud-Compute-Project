@@ -1,0 +1,75 @@
+/* pages/albumPhotos/albumPhotos.wxss */
+
+.imageBox {
+  width: 100%;
+  margin-top: 40rpx;
+  height: 480rpx;
+  position: relative;
+}
+
+.imageClass {
+  width: 730rpx;
+  height: 400rpx;
+  position: absolute;
+  left: 10rpx;
+}
+
+.photosClass {
+  margin-top: 0rpx;
+}
+
+.userInfo {
+  width: 730rpx;
+  height: 70rpx;
+  position: absolute;
+  left: 10rpx;
+  top: 410rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid;
+  border-color:rgb(101, 99, 102);
+}
+
+.avatarUrl {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+}
+
+.groupUser {
+  width: 100%;
+  height: 200rpx;
+  column-count: 8;
+}
+
+.userClass {
+  width: 100%;
+}
+
+.userImage {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.albumName {
+  font-size: 80rpx;
+  text-align: center;
+}
+.addAlbum {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 80rpx;
+  position: fixed;
+  bottom: 20rpx;
+  left: 335rpx;
+  background-color: #FFFFFF;
+}
+.addImage {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 80rpx;
+  box-shadow: 3rpx 3rpx 3rpx 3rpx #666;
+}
+.srollViewClass{
+  margin-bottom: 120rpx;
+}
